@@ -1,0 +1,22 @@
+Il programma ha funzionato come previsto?
+Si, il programma ha eseguito tutte le richieste in modo corretto
+
+In quali casi ha sbagliato? Perché?
+All'inizio dava la maggior parte delle notizie come "dubbie" dato che avevamo inserito il punteggio sbagliato,
+quindi abbiamo equilibrato il punteggio dato alle parole, sia sospette che non, in modo tale da filtrare meglio il risultato finale
+
+
+Quali parole hanno influito di più sul punteggio?
+le parole ritenute più "pesanti" nel punteggio, hanno un valore di 2 o -2, ad esempio "studio scientifico: +2", oppure per quelle negative "il governo nasconde: -2,"
+
+
+Cosa migliorerebbe l’affidabilità del sistema?
+L'aggiunta di più parole all'interno delle liste, magari anche con punteggi più equilibrati, per avere una risposta più affina con la realtà
+
+
+o Come si collega questo lavoro all’uso consapevole delle fonti online?
+Questo progetto aiuta a sviluppare un pensiero critico verso le notizie online e a riconoscere i segnali che possono indicare una scarsa affidabilità di una fonte.
+
+
+Cosa hai imparato sulle fake news attraverso questo progetto?
+Che possono essere ovunque, e sopratutto di essere più cauti durante la ricerca di informazioni
