@@ -1,10 +1,9 @@
 titoli = []
-n = int(input("quanti titoli vuoi inserire: "))
+n = int(input("Quanti titoli vuoi inserire: "))
 for i in range(n):
-    titolo = input("inserisci un titolo di un articolo: ")
+    titolo = input("Inserisci un titolo di un articolo: ")
     titoli.append(titolo)
 
-# Parole sospette con punteggi personalizzati
 parole_sospette = {
     "scoperta segreta": -2,
     "sconvolgente": -1,
@@ -18,7 +17,6 @@ parole_sospette = {
     "mai visto prima": -1
 }
 
-# Parole rassicuranti con punteggi personalizzati
 parole_rassicuranti = {
     "studio scientifico": +2,
     "ricerca": +1,
@@ -33,37 +31,36 @@ parole_rassicuranti = {
 }
 
 def analizza_titolo(titolo):
-    titolo = titolo.lower()
-    punteggio = 0
+    titolo = titolo.lower() 
+    punteggio = 0  
 
     for parola, valore in parole_sospette.items():
         if parola in titolo:
-            punteggio += valore  # somma punteggio negativo
+            punteggio += valore 
 
     for parola, valore in parole_rassicuranti.items():
         if parola in titolo:
-            punteggio += valore  # somma punteggio positivo
+            punteggio += valore 
 
     return punteggio
 
 def visualizza_classifica(titoli):
     risultati = []
+    numero = 1  
+
     for titolo in titoli:
         punteggio = analizza_titolo(titolo)
-        risultati.append((titolo, punteggio))
-
-    # Ordina in base al punteggio, dal più alto al più basso
-    risultati.sort(key=lambda x: x[1], reverse=True)
+        risultati.append((titolo, punteggio))  
 
     print("Classifica delle notizie:")
-    for count, (titolo, punteggio) in enumerate(risultati, start=1):
+    for titolo, punteggio in risultati:
+        
         classificazione = (
             "Fake news" if punteggio < -3 else
             "Notizia affidabile" if punteggio > 3 else
             "Notizia dubbia"
         )
-        print(f"{count}. {titolo} - Punteggio: {punteggio} - Classificazione: {classificazione}")
+        print(f"{numero}. {titolo} - Punteggio: {punteggio} - Classificazione: {classificazione}")
+        numero += 1 
 
-# Analizza e stampa
-print(analizza_titolo(titolo))
 visualizza_classifica(titoli)
